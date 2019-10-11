@@ -1,0 +1,4 @@
+﻿  ActorJobs.cpp
+D:\C++Project\AlgorithmChallenges\AlgorithmChallenges\ActorJobs.cpp(38): warning C4715: 'Overlaping': not all control paths return a value
+D:\C++Project\AlgorithmChallenges\AlgorithmChallenges\ActorJobs.cpp(65): error C4700: uninitialized local variable 'n' used
+D:\C++Project\AlgorithmChallenges\AlgorithmChallenges\ActorJobs.cpp(68): error C4700: uninitialized local variable 'k' used
