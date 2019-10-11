@@ -8,8 +8,9 @@ void FindMissing(int array[], int length)
 	{
 		if (lastReach < array[nextNo])
 		{
+			
+			std::cout << " - " << lastReach ;
 			lastReach++;
-			std::cout << lastReach << " - ";
 			
 		}
 		
