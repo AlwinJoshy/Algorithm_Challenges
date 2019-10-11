@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ActorJobs.cpp">
+    <ClCompile Include="FindMissingNumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
