@@ -34,7 +34,7 @@ public:
 bool Overlaping(Job jobOne, Job jobTwo)
 {
 	if (jobOne.startMonth < jobTwo.endMonth && jobOne.endMonth > jobTwo.startMonth) return true;
-	else false;
+	else return false;
 }
 
 int main() 
@@ -62,16 +62,22 @@ int main()
 		memoSize = 1;
 		jobMemo[memoSize - 1] = i;
 
-		for (int n; n < 11; n++) 
+		for (int n = 0; n < 11; n++) 
 		{
 			bool addJob = true;
-			for (int k; k < memoSize; k++)
+
+			for (int k = 0; k < memoSize; k++)
 			{
-				if (jobMemo[k] != n && Overlaping(allJobs[jobMemo[k]], allJobs[n])) 
+				if (jobMemo[k] != n)
 				{
-					addJob = false;
-					break;
+
+					if (Overlaping(allJobs[jobMemo[k]], allJobs[n]))
+					{
+						addJob = false;
+						break;
+					}
 				}
+				else addJob = false;
 			}
 			if (addJob) 
 			{
@@ -81,7 +87,7 @@ int main()
 		}
 
 		std::cout << "job count is : " << memoSize << " the job list no : ";
-		for (size_t i = 0; i < memoSize; i++)
+		for (int i = 0; i < memoSize; i++)
 		{
 			std::cout << jobMemo[i] << " | ";
 		}
